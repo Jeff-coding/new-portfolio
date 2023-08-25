@@ -1,0 +1,35 @@
+.sec-three {
+    padding: 7.5rem 0;
+    background-color: $white-color;
+    position: relative;
+
+    &__title {
+        font-size: 48px;
+        font-weight: 900;
+        text-align: center;
+        margin-bottom: 2rem;
+
+        @include atMedium {
+            font-size: 64px;
+        }
+    }
+
+    &__sub-title {
+        text-align: center;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.75;
+        max-width: 100%;
+        margin-bottom: 2rem;
+
+        @include atMedium {
+            max-width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .swiper {
+        margin: 5rem 1.5rem 0;
+    }
+}

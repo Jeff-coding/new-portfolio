@@ -1,0 +1,59 @@
+.sec-one {
+    height: 100vh;
+    padding: 7.5rem 0;
+    background-color: $dark-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &__title {
+        font-size: 75px;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 0.75;
+        margin-bottom: 2.5rem;
+
+        @include atMedium {
+            font-size: 14vw;
+            margin-bottom: 5rem;
+        }
+
+        span {
+            display: block;
+        }
+    }
+
+    &__sub-title {
+        text-align: center;
+        color: $text-color;
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 2.5;
+
+        span {
+            display: block;
+            letter-spacing: 4px;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            text-decoration-color: $text-color;
+            
+            @include atMedium {
+                text-decoration: none;
+                letter-spacing: 6px;
+                display: inline;
+            }
+
+            &.mob-hidden {
+                display: none;
+
+                @include atMedium {
+                    display: inline;
+                    margin: 0 1rem;
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,84 @@
+.sec-four {
+    padding: 7.5rem 0;
+    background-color: $white-color;
+    position: relative;
+
+    &__title {
+        font-size: 48px;
+        font-weight: 900;
+        margin-bottom: 2rem;
+        text-align: center;
+
+        @include atMedium {
+            text-align: left;
+            font-size: 64px;
+        }
+    }
+
+    &__sub-title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.75;
+        margin-bottom: 2rem;
+        text-align: center;
+
+        @include atMedium {
+            text-align: left;
+        }
+    }
+
+    .text-center {
+        text-align: center;
+        margin-bottom: 2rem;
+
+        @include atMedium {
+            text-align: left;
+        }
+    }
+
+    .main-columns {
+        align-items: center;
+        flex-direction: column-reverse;
+        margin-bottom: 4rem;
+
+        @include atMedium {
+            flex-direction: row;
+        }
+
+        .column {
+            &:last-child {
+                text-align: center;
+
+                svg {
+                    max-width: 60%;
+                    width: 100%;
+                    @media screen and (max-width: 767px) {
+                        margin: 0 auto 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .company {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    .job-title,
+    .tenure {
+        font-size: 14px;
+        margin-bottom: 0.25rem;
+        font-weight: 600;
+    }
+
+    .tenure {
+        margin-bottom: 2.5rem;
+
+        &.no-margin {
+            margin: 0;
+        }
+    }
+    
+}

@@ -1,0 +1,134 @@
+html,
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background-color: $dark-color;
+    color: $dark-color;
+}
+
+h1 {
+    font-family: "Work Sans", sans-serif;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.container {
+    max-width: 100%;
+    width: 100%;
+
+    padding: {
+        left: 1rem;
+        right: 1rem;
+    }
+
+    @include atMedium {
+        max-width: 768px;
+        margin: {
+            left: auto;
+            right: auto;
+        }
+    }
+
+    @include atLarge {
+        max-width: 1140px;
+    }
+}
+
+.columns {
+    display: flex;
+    flex-direction: column;
+
+    @include atMedium {
+        flex-direction: row;
+    }
+
+    .column {
+        flex: 1;
+    }
+}
+
+.white-text {
+    color: $text-color;
+}
+
+.primary-text {
+    color: $primary-color;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.button-default {
+    display: inline-block;
+    padding: 18px 42px;
+    border-radius: 60px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $white-color;
+    font-size: 14px;
+    letter-spacing: 2px;
+    box-shadow: 0 0 20px rgba(0, 90, 255, 0.5);
+    background: linear-gradient(180deg, #3A89FF, #005AE1);
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 30px rgba(0, 90, 255, 0.55);
+    }
+
+    &:active {
+        transform: translateY(0);
+        box-shadow: 0 0 10px rgba(0, 90, 255, 0.5);
+    }
+}
+
+.section-btn {
+    &__bottom-animation {
+        position: absolute;
+        bottom: 5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+
+        small {
+            color: $text-color;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    }
+
+    &__btn {
+        border: 2px solid $white-color;
+        width: 20px;
+        height: 40px;
+        display: block;
+        border-radius: 20px;
+        margin: 1rem auto;
+        cursor: pointer;
+
+        &::after {
+            content: "";
+            width: 12px;
+            height: 18px;
+            display: block;
+            border-radius: 14px;
+            background-color: $primary-color;
+            margin: auto;
+            animation: animatedButton 1s ease-out infinite alternate;
+        }
+    }
+}
+
+@keyframes animatedButton {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(6px);
+    }
+}

@@ -1,0 +1,87 @@
+.sec-five {
+    height: 100vh;
+    padding: 7.5rem 0;
+    background-color: $dark-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &__title {
+        font-size: 48px;
+        font-weight: 700;
+        text-align: center;
+        color: $text-color;
+        margin-bottom: 2rem;
+
+        @include atMedium {
+            font-size: 64px;
+        }
+    }
+
+    &__sub-title {
+        color: $text-color;
+        text-align: center;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.75;
+        max-width: 100%;
+        margin-bottom: 2rem;
+
+        @include atMedium {
+            max-width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .social {
+        margin: {
+            top: 5rem;
+            left: 0;
+        };
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+
+        // &__item {
+        //     border: 1px solid $text-color;
+        //     border-radius: 100%;
+        // }
+
+        &__link {
+            display: inline-block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                path {
+                    stroke: $primary-color;
+                }
+            }
+
+            svg {
+                width: 32px;
+                height: 32px;
+
+                @include atMedium {
+                    width: 48px;
+                    height: 48px;
+                }
+                
+                path {
+                    stroke-width: 1px;
+                    stroke: $text-color;
+                }
+
+                circle {
+                    stroke: $text-color;
+                }
+            }
+        }
+    }
+}
