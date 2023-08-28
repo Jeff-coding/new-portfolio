@@ -8,6 +8,25 @@
     justify-content: center;
     position: relative;
 
+    .button-menu-set {
+        position: absolute;
+        top: 1.75rem;
+        right: 1.75rem;
+
+        @include atLarge {
+            top: 3.5rem;
+            right: 3.5rem;
+        }
+        
+        .menu-btn,
+        .mail-btn {
+            svg {
+                width: 30px;
+                stroke: $text-color;
+            }
+        }
+    }
+
     &__title {
         font-size: 75px;
         text-transform: uppercase;
@@ -35,12 +54,11 @@
         span {
             display: block;
             letter-spacing: 4px;
-            text-decoration: underline;
+            text-decoration: none;
             text-underline-offset: 4px;
             text-decoration-color: $text-color;
             
             @include atMedium {
-                text-decoration: none;
                 letter-spacing: 6px;
                 display: inline;
             }

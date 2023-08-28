@@ -9,7 +9,7 @@
     position: relative;
 
     &__title {
-        font-size: 48px;
+        font-size: 40px;
         font-weight: 700;
         text-align: center;
         color: $text-color;
@@ -27,7 +27,7 @@
         font-size: 18px;
         line-height: 1.75;
         max-width: 100%;
-        margin-bottom: 2rem;
+        margin-bottom: 2.5rem;
 
         @include atMedium {
             max-width: 70%;
@@ -47,11 +47,6 @@
         justify-content: center;
         gap: 2rem;
 
-        // &__item {
-        //     border: 1px solid $text-color;
-        //     border-radius: 100%;
-        // }
-
         &__link {
             display: inline-block;
             display: flex;
@@ -59,8 +54,14 @@
             justify-content: center;
 
             &:hover {
-                path {
-                    stroke: $primary-color;
+                svg {
+                    path {
+                        stroke: $primary-color;
+                    }
+                    
+                    circle {
+                        stroke: $primary-color !important;
+                    }
                 }
             }
 
@@ -76,9 +77,11 @@
                 path {
                     stroke-width: 1px;
                     stroke: $text-color;
+                    transition: all 0.1s ease-in-out;
                 }
 
                 circle {
+                    transition: all 0.1s ease-in-out;
                     stroke: $text-color;
                 }
             }
