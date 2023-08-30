@@ -50,6 +50,12 @@
         }
 
         .column {
+            &:first-child {
+                @include atXMedium {
+                    flex-basis: 60%;
+                }
+            }
+
             &:last-child {
                 text-align: center;
 
@@ -59,6 +65,7 @@
 
                 @include atXMedium {
                     text-align: right;
+                    flex-basis: 40%;
                 }
 
                 svg {
