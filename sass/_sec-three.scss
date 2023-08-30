@@ -2,6 +2,20 @@
     padding: 7.5rem 0;
     background-color: $white-color;
     position: relative;
+    
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        z-index: 5;
+        max-width: 1140px;
+        width: 70%;
+        height: 1px;
+        background-color: #d4d7db;
+        border-spacing: 2px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
     &__title {
         font-size: 40px;
@@ -20,7 +34,7 @@
         font-size: 18px;
         line-height: 1.75;
         max-width: 100%;
-        margin-bottom: 2rem;
+        margin-bottom: 5rem;
 
         @include atMedium {
             max-width: 70%;
@@ -31,5 +45,41 @@
 
     .swiper {
         margin: 5rem 1.5rem 0;
+    }
+
+    &__logo-title {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+    }
+
+    .logo-set {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        @include atXMedium {
+            flex-wrap: nowrap;
+        }
+
+        a {
+            max-width: calc(50% - 2rem);
+            
+            @include atLarge {
+                max-width: 175px;
+            }
+
+            img {
+                opacity: 0.7;
+                transition: all 0.2s ease-in-out;
+    
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
     }
 }

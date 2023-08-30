@@ -40,11 +40,12 @@
     }
 
     .main-columns {
-        align-items: center;
         flex-direction: column-reverse;
-        margin-bottom: 7.5rem;
+        margin-bottom: 5rem;        
 
-        @include atMedium {
+        @include atXMedium {
+            margin-bottom: 7.5rem;
+            align-items: center;
             flex-direction: row;
         }
 
@@ -53,12 +54,17 @@
                 text-align: center;
 
                 @include atMedium {
+                    text-align: left;
+                }
+
+                @include atXMedium {
                     text-align: right;
                 }
 
                 svg {
-                    max-width: 60%;
+                    max-width: 200px;
                     width: 100%;
+
                     @media screen and (max-width: 767px) {
                         margin: 0 auto 1.5rem;
                     }
@@ -89,6 +95,16 @@
 
         &.no-margin {
             margin: 0;
+        }
+    }
+
+    .job-title,
+    .tenure,
+    .company {
+        text-align: center;
+
+        @include atMedium {
+            text-align: left;
         }
     }
     

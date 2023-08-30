@@ -1,5 +1,6 @@
 .sec-one {
     height: 100vh;
+    min-height: 800px;
     padding: 7.5rem 0;
     background-color: $dark-color;
     display: flex;
@@ -28,7 +29,7 @@
     }
 
     &__title {
-        font-size: 75px;
+        font-size: 70px;
         text-transform: uppercase;
         text-align: center;
         line-height: 0.75;
