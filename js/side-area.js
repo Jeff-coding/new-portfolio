@@ -32,8 +32,6 @@ menuLink.forEach((menuBtn) => {
                     return;
                 }, 500);
             })
-        }
-        
+        } 
     });
-
 });
