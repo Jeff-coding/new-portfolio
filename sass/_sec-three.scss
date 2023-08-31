@@ -67,15 +67,17 @@
 
         a {
             max-width: calc(50% - 2rem);
+            width: 100%;
             
             @include atLarge {
                 max-width: 175px;
             }
 
-            img {
+            .logo {
                 opacity: 0.7;
                 transition: all 0.2s ease-in-out;
-    
+                width: 175px;
+
                 &:hover {
                     opacity: 1;
                 }
