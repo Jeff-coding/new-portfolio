@@ -1,0 +1,60 @@
+.side-area {
+    position: fixed;
+    top: 0;
+    right: -110%;
+    transition: all 0.5s ease-in-out;
+    z-index: 51;
+    max-width: 450px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0 -4px 8px rgba(#000, 0.24);
+    padding: 4rem 2rem 2rem;
+
+    &.slideOut {
+        right: 0;
+    }
+
+    &__title {
+        font-size: 64px;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+    }
+
+    &__copy {
+        font-size: 18px;
+        line-height: 1.75;
+        margin-bottom: 1rem;
+    }
+
+    &__social-title {
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    .email-link {
+        margin-bottom: 2rem;
+        display: inline-block;
+    }
+
+    .social {
+        padding: 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 1rem;
+
+        &__link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                width: 40px;
+                height: 40px;
+                fill: $dark-color;
+                
+                
+            }
+        }
+    }
+}

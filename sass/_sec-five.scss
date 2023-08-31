@@ -47,42 +47,21 @@
         gap: 2rem;
 
         &__link {
-            display: inline-block;
             display: flex;
             align-items: center;
             justify-content: center;
 
-            &:hover {
-                svg {
-                    path {
-                        stroke: $primary-color;
-                    }
-                    
-                    circle {
-                        stroke: $primary-color !important;
-                    }
-                }
-            }
-
             svg {
                 width: 32px;
                 height: 32px;
+                fill: $text-color;
 
                 @include atMedium {
                     width: 48px;
                     height: 48px;
                 }
                 
-                path {
-                    stroke-width: 1px;
-                    stroke: $text-color;
-                    transition: all 0.1s ease-in-out;
-                }
-
-                circle {
-                    transition: all 0.1s ease-in-out;
-                    stroke: $text-color;
-                }
+                
             }
         }
     }
